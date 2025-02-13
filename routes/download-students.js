@@ -50,7 +50,7 @@ router.get('/download', async (req, res) => {
                 // Add other fields as needed
             });
             // Automatically adjust row height based on content
-            row.height = Math.max(40, row.values.reduce((maxHeight, value) => {
+            row.height = Math.max(30, row.values.reduce((maxHeight, value) => {
                 // Calculate height based on content length
                 return Math.max(maxHeight, value ? value.toString().length : 0);
             }, 0) * 1.5); // Adjust the multiplier as needed for height
