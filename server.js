@@ -35,6 +35,8 @@ const classRoutes = require('./routes/classes');
 const studentsRoutes = require('./routes/students');
 const marksRoutes = require('./routes/marks');
 const sectionRoutes = require('./routes/section.routes');
+const downloadRoutes = require('./routes/download-students'); // Adjust the path as necessary
+
 
 // Use routes
 app.use('/api/auth', authRoutes);
@@ -44,6 +46,8 @@ app.use('/api/students', studentsRoutes);
 app.use('/api/marks', marksRoutes);
 app.use('/api/academic', academicRoutes);
 app.use('/api/sections', sectionRoutes);
+app.use('/api/download-students', downloadRoutes);
+
 
 // Root endpoint for API health check
 app.get('/api', (req, res) => {
