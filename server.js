@@ -50,8 +50,8 @@ app.use('/api/download-students', downloadRoutes);
 
 
 // Root endpoint for API health check
-app.get('/api', (req, res) => {
-  res.json({ message: 'Welcome to Skyview School API' });
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Skyview School API Version 1' });
 });
 
 // 404 handler
