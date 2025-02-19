@@ -15,12 +15,13 @@ router.post('/new-feedback', async (req, res) => {
 });
 
 // Get all feedback (admin only)
-router.get('/all-feedback', auth, async (req, res) => {
+// router.get('/all-feedback', auth, async (req, res) => {
+router.get('/all-feedback',  async (req, res) => {
     try {
         // Ensure user is admin
-        if (!req.user.isAdmin) {
-            return res.status(403).send({ message: 'Access denied. Admin only.' });
-        }
+        // if (!req.user.isAdmin) {
+        //     return res.status(403).send({ message: 'Access denied. Admin only.' });
+        // }
 
         const query = {};
         
